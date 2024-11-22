@@ -10,14 +10,14 @@ const ItemPage = () => {
   }, []);
 
   const fetchItems = async () => {
-    const response = await axios.get("https://backend-mern-demo-git-main-umerexpress-projects.vercel.app");
+    const response = await axios.get("https://backend-mern-demo.vercel.app");
     setItems(response.data);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (form.name && form.description) {
-      await axios.post("http://localhost:5000/api/items", form);
+      await axios.post("https://backend-mern-demo.vercel.app//api/items", form);
       setForm({ name: "", description: "" });
       fetchItems();
     }
