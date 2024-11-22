@@ -17,7 +17,7 @@ const ItemPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (form.name && form.description) {
-      await axios.post("https://backend-mern-demo.vercel.app//api/items", form);
+      await axios.post("https://backend-mern-demo.vercel.app/api/items", form);
       setForm({ name: "", description: "" });
       fetchItems();
     }
