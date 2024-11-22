@@ -10,7 +10,7 @@ const ItemPage = () => {
   }, []);
 
   const fetchItems = async () => {
-    const response = await axios.get("http://localhost:5000/api/items");
+    const response = await axios.get("https://backend-mern-demo-git-main-umerexpress-projects.vercel.app");
     setItems(response.data);
   };
 
